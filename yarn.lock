@@ -9182,6 +9182,11 @@ q@^1.1.2:
   resolved "https://registry.yarnpkg.com/q/-/q-1.5.1.tgz#7e32f75b41381291d04611f1bf14109ac00651d7"
   integrity sha1-fjL3W0E4EpHQRhHxvxQQmsAGUdc=
 
+qr-scanner@^1.3.0:
+  version "1.3.0"
+  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/qr-scanner/-/qr-scanner-1.3.0.tgz#5a7cc7ae8edefc3ad0053a5473f591fb113f91ff"
+  integrity sha1-WnzHro7e/DrQBTpUc/WR+xE/kf8=
+
 qs@6.7.0:
   version "6.7.0"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
@@ -9261,14 +9266,6 @@ raw-body@2.4.0:
     http-errors "1.7.2"
     iconv-lite "0.4.24"
     unpipe "1.0.0"
-
-raw-loader@^4.0.2:
-  version "4.0.2"
-  resolved "https://domoreexp.pkgs.visualstudio.com/_packaging/npm-mirror/npm/registry/raw-loader/-/raw-loader-4.0.2.tgz#1aac6b7d1ad1501e66efdac1522c73e59a584eb6"
-  integrity sha1-GqxrfRrRUB5m79rBUixz5ZpYTrY=
-  dependencies:
-    loader-utils "^2.0.0"
-    schema-utils "^3.0.0"
 
 react-app-polyfill@^2.0.0:
   version "2.0.0"
