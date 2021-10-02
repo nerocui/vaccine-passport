@@ -86,7 +86,7 @@ const App = () => {
 			htmlFor="contained-button-file">
 			<Input onChange={onFileChange} accept="image/*" id="contained-button-file" type="file" />
 			<Button variant="contained" component="span">
-			Upload
+			  Open
 			</Button>
 		</label>}
 		{!!errorString && <p className='bottom' style={{ color: 'red' }}>{errorString}</p>}
