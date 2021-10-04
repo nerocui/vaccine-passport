@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/vaccine-passport/static/css/main.14984273.chunk.css",
-    "main.js": "/vaccine-passport/static/js/main.22139884.chunk.js",
-    "main.js.map": "/vaccine-passport/static/js/main.22139884.chunk.js.map",
-    "runtime-main.js": "/vaccine-passport/static/js/runtime-main.d2c54ca9.js",
-    "runtime-main.js.map": "/vaccine-passport/static/js/runtime-main.d2c54ca9.js.map",
-    "static/js/2.e430e01f.chunk.js": "/vaccine-passport/static/js/2.e430e01f.chunk.js",
-    "static/js/2.e430e01f.chunk.js.map": "/vaccine-passport/static/js/2.e430e01f.chunk.js.map",
-    "static/js/3.8d0f20a7.chunk.js": "/vaccine-passport/static/js/3.8d0f20a7.chunk.js",
-    "static/js/3.8d0f20a7.chunk.js.map": "/vaccine-passport/static/js/3.8d0f20a7.chunk.js.map",
+    "main.css": "/vaccine-passport/static/css/main.2c426370.chunk.css",
+    "main.js": "/vaccine-passport/static/js/main.6b7551a3.chunk.js",
+    "main.js.map": "/vaccine-passport/static/js/main.6b7551a3.chunk.js.map",
+    "runtime-main.js": "/vaccine-passport/static/js/runtime-main.ba1d6563.js",
+    "runtime-main.js.map": "/vaccine-passport/static/js/runtime-main.ba1d6563.js.map",
+    "static/js/2.0e50bc3f.chunk.js": "/vaccine-passport/static/js/2.0e50bc3f.chunk.js",
+    "static/js/2.0e50bc3f.chunk.js.map": "/vaccine-passport/static/js/2.0e50bc3f.chunk.js.map",
+    "static/js/3.703b83ed.chunk.js": "/vaccine-passport/static/js/3.703b83ed.chunk.js",
+    "static/js/3.703b83ed.chunk.js.map": "/vaccine-passport/static/js/3.703b83ed.chunk.js.map",
     "qr-scanner-worker.min.js": "/vaccine-passport/32b7d3573a2d4cf09318bfb2de56410c.js",
     "index.html": "/vaccine-passport/index.html",
-    "static/css/main.14984273.chunk.css.map": "/vaccine-passport/static/css/main.14984273.chunk.css.map",
-    "static/js/2.e430e01f.chunk.js.LICENSE.txt": "/vaccine-passport/static/js/2.e430e01f.chunk.js.LICENSE.txt"
+    "static/css/main.2c426370.chunk.css.map": "/vaccine-passport/static/css/main.2c426370.chunk.css.map",
+    "static/js/2.0e50bc3f.chunk.js.LICENSE.txt": "/vaccine-passport/static/js/2.0e50bc3f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.d2c54ca9.js",
-    "static/js/2.e430e01f.chunk.js",
-    "static/css/main.14984273.chunk.css",
-    "static/js/main.22139884.chunk.js"
+    "static/js/runtime-main.ba1d6563.js",
+    "static/js/2.0e50bc3f.chunk.js",
+    "static/css/main.2c426370.chunk.css",
+    "static/js/main.6b7551a3.chunk.js"
   ]
 }
