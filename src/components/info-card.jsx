@@ -1,8 +1,14 @@
 import { Typography, CardContent, Divider } from "@mui/material"
 import { useEffect, useState } from "react";
+import { styled } from '@mui/material/styles';
 import decode from "shc-protocol";
 
-export const InfoCard = ({ code, onClick }) => {
+const Container = styled('div')({
+    border: '1px solid grey',
+    borderRadius: '1rem',
+});
+
+export const InfoCard = ({ code }) => {
     const [patient, setPatient] = useState();
     const [firstShot, setFirstShot] = useState();
     const [secondShot, setSecondShot] = useState();
@@ -33,11 +39,11 @@ export const InfoCard = ({ code, onClick }) => {
       }, [code, setPatient, setFirstShot, setSecondShot])
 
     if (!code) {
-        return null;
+        return <Container>Failed to scan the QR code</Container>;
     }
 
     return (
-        <div onClick={onClick} className='flipper-container' style={{ border: '1px solid grey', borderRadius: '1rem' }}>
+        <Container>
             <CardContent>
                 <Typography sx={{ fontSize: 14 }} color='text.grey'>
                     Name
@@ -113,7 +119,7 @@ export const InfoCard = ({ code, onClick }) => {
                 </Typography>
             </CardContent>
             <div className='bar'/>
-        </div>
+        </Container>
     );
 }
 

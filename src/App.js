@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
 import { styled } from '@mui/material/styles';
 import ReactCardFlip from 'react-card-flip';
 import QrScanner from 'qr-scanner';
@@ -53,7 +52,7 @@ const App = () => {
         setImg(undefined);
         setCode(undefined);
         setErrorString(undefined);
-		setIsFlipped(false);
+		    setIsFlipped(false);
         localStorage.removeItem('imagePath');
       }
     }
@@ -63,19 +62,23 @@ const App = () => {
     setIsFlipped(!isFlipped);
   }, [isFlipped, setIsFlipped]);
 
-  useEffect(() => {
-	  if (!!img && !code) {
-		QrScanner.scanImage(img)
-			.then(resCode => {
-				if (resCode.startsWith('shc:')) {
-					setCode(resCode);
-				} else {
-					setErrorString('Invalid QR Code');
-				}
-			})
-			.catch(err => setErrorString('Invalid QR Code'))
+  const onRetry = useCallback(() => {
+    if (!!img && !code) {
+      QrScanner.scanImage(img)
+        .then(resCode => {
+          if (resCode.startsWith('shc:')) {
+            setCode(resCode);
+          } else {
+            setCode(undefined);
+          }
+        })
+        .catch(err => setErrorString('Invalid QR Code'))
 	  }
-  }, [img, code, setCode, setErrorString]);
+  }, [img, code, setCode, setErrorString])
+
+  useEffect(() => {
+	  onRetry();
+  }, [onRetry]);
 
   return (
     <div id='app'>
@@ -89,7 +92,14 @@ const App = () => {
 			  Open
 			</Button>
 		</label>}
-		{!!errorString && <p className='bottom' style={{ color: 'red' }}>{errorString}</p>}
+		{!!errorString && 
+      <div>
+        <p className='bottom' style={{ color: 'red' }}>
+          {errorString}
+        </p>
+        <Button onClick={onRetry} variant='contained'>Retry</Button>
+      </div>
+    }
 		{(!!img && !errorString) && 
 			<div
 				id='flipper'
@@ -102,7 +112,11 @@ const App = () => {
 						className='flipper-container'>
 						<img src={img} alt='covid vaccine qr code'/>
 					</div>
-					<InfoCard code={code} onClick={onFlip}/>
+          <div
+						onClick={onFlip}
+						className='flipper-container'>
+					  <InfoCard code={code} onClick={onFlip}/>
+          </div>
 				</ReactCardFlip>
 			</div>
 			
