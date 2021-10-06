@@ -71,10 +71,9 @@ const App = () => {
           } else {
             setCode(undefined);
           }
-        })
-        .catch(err => setErrorString('Invalid QR Code'))
+        });
 	  }
-  }, [img, code, setCode, setErrorString])
+  }, [img, code, setCode])
 
   useEffect(() => {
 	  onRetry();
@@ -93,14 +92,14 @@ const App = () => {
 			</Button>
 		</label>}
 		{!!errorString && 
-      <div>
-        <p className='bottom' style={{ color: 'red' }}>
+      <div className='bottom'>
+        <p style={{ color: 'red' }}>
           {errorString}
         </p>
         <Button onClick={onRetry} variant='contained'>Retry</Button>
       </div>
     }
-		{(!!img && !errorString) && 
+		{!!img && 
 			<div
 				id='flipper'
 				className='center'>
@@ -121,7 +120,7 @@ const App = () => {
 			</div>
 			
 		}
-		{(!!img && !errorString) &&
+		{!!img &&
 			<Button
 				id='delete'
 				variant='contained'
