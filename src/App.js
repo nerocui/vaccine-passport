@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo, useState } from 'react';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import ReactCardFlip from 'react-card-flip';
@@ -20,21 +20,15 @@ const App = () => {
   const [isFlipped, setIsFlipped] = useState(false);
   const [img, setImg] = useState(existingFile);
   const [errorString, setErrorString] = useState();
-  const [code, setCode] = useState();
   const reader = useMemo(() => {
     const res = new FileReader();
     res.onload = function() {
-      QrScanner.scanImage(res.result)
-        .then(resCode => {
-          if (resCode.startsWith('shc:')) {
-            setImg(res.result);
-            setCode(resCode);
-            localStorage.setItem('imagePath', res.result);
-          } else {
-            setErrorString('Invalid QR Code');
-          }
-        })
-        .catch(err => setErrorString('Invalid QR Code'));
+      if (!!res.result) {
+        setImg(res.result);
+        localStorage.setItem('imagePath', res.result);
+      } else {
+        setErrorString('Invalid QR Code');
+      }
     };
     return res;
   }, [setImg, setErrorString]);
@@ -50,34 +44,17 @@ const App = () => {
       let conf = confirm('Remove your Vaccine Card?');
       if (conf) {
         setImg(undefined);
-        setCode(undefined);
         setErrorString(undefined);
 		    setIsFlipped(false);
         localStorage.removeItem('imagePath');
       }
     }
-  }, [img, setImg, setCode, setErrorString, setIsFlipped]);
+  }, [img, setImg, setErrorString, setIsFlipped]);
 
   const onFlip = useCallback(() => {
     setIsFlipped(!isFlipped);
   }, [isFlipped, setIsFlipped]);
 
-  const onRetry = useCallback(() => {
-    if (!!img && !code) {
-      QrScanner.scanImage(img)
-        .then(resCode => {
-          if (resCode.startsWith('shc:')) {
-            setCode(resCode);
-          } else {
-            setCode(undefined);
-          }
-        });
-	  }
-  }, [img, code, setCode])
-
-  useEffect(() => {
-	  onRetry();
-  }, [onRetry]);
 
   return (
     <div id='app'>
@@ -92,12 +69,9 @@ const App = () => {
 			</Button>
 		</label>}
 		{!!errorString && 
-      <div className='bottom'>
-        <p style={{ color: 'red' }}>
-          {errorString}
-        </p>
-        <Button onClick={onRetry} variant='contained'>Retry</Button>
-      </div>
+      <p className='bottom' style={{ color: 'red' }}>
+        {errorString}
+      </p>
     }
 		{!!img && 
 			<div
@@ -114,7 +88,7 @@ const App = () => {
           <div
 						onClick={onFlip}
 						className='flipper-container'>
-					  <InfoCard code={code} onClick={onFlip}/>
+					  <InfoCard img={img}/>
           </div>
 				</ReactCardFlip>
 			</div>
