@@ -1,12 +1,12 @@
 {
   "files": {
     "main.css": "/vaccine-passport/static/css/main.2c426370.chunk.css",
-    "main.js": "/vaccine-passport/static/js/main.34f6af63.chunk.js",
-    "main.js.map": "/vaccine-passport/static/js/main.34f6af63.chunk.js.map",
+    "main.js": "/vaccine-passport/static/js/main.2a936c82.chunk.js",
+    "main.js.map": "/vaccine-passport/static/js/main.2a936c82.chunk.js.map",
     "runtime-main.js": "/vaccine-passport/static/js/runtime-main.44c7353a.js",
     "runtime-main.js.map": "/vaccine-passport/static/js/runtime-main.44c7353a.js.map",
-    "static/js/2.3b8e7ba5.chunk.js": "/vaccine-passport/static/js/2.3b8e7ba5.chunk.js",
-    "static/js/2.3b8e7ba5.chunk.js.map": "/vaccine-passport/static/js/2.3b8e7ba5.chunk.js.map",
+    "static/js/2.f560a3e8.chunk.js": "/vaccine-passport/static/js/2.f560a3e8.chunk.js",
+    "static/js/2.f560a3e8.chunk.js.map": "/vaccine-passport/static/js/2.f560a3e8.chunk.js.map",
     "static/js/3.42bd3216.chunk.js": "/vaccine-passport/static/js/3.42bd3216.chunk.js",
     "static/js/3.42bd3216.chunk.js.map": "/vaccine-passport/static/js/3.42bd3216.chunk.js.map",
     "qr-scanner-worker.min.js": "/vaccine-passport/32b7d3573a2d4cf09318bfb2de56410c.js",
@@ -14,12 +14,12 @@
     "service-worker.js": "/vaccine-passport/service-worker.js",
     "service-worker.js.map": "/vaccine-passport/service-worker.js.map",
     "static/css/main.2c426370.chunk.css.map": "/vaccine-passport/static/css/main.2c426370.chunk.css.map",
-    "static/js/2.3b8e7ba5.chunk.js.LICENSE.txt": "/vaccine-passport/static/js/2.3b8e7ba5.chunk.js.LICENSE.txt"
+    "static/js/2.f560a3e8.chunk.js.LICENSE.txt": "/vaccine-passport/static/js/2.f560a3e8.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.44c7353a.js",
-    "static/js/2.3b8e7ba5.chunk.js",
+    "static/js/2.f560a3e8.chunk.js",
     "static/css/main.2c426370.chunk.css",
-    "static/js/main.34f6af63.chunk.js"
+    "static/js/main.2a936c82.chunk.js"
   ]
 }
